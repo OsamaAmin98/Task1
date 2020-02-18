@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbarThumbVertical="@null"
+    >
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,7 +35,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sign_in_username_edit_text"
+        android:id="@+id/edit_text_username_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:counterEnabled="true"
@@ -42,24 +48,29 @@
             android:layout_height="wrap_content"
             android:hint="@string/username_hint"
             android:inputType="text"
+            android:drawableRight="@drawable/username_24dp"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sign_in_password_edit_text"
+        android:id="@+id/edit_text_password_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
         app:passwordToggleEnabled="true"
+        android:layoutDirection="rtl"
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password_hint"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/password_icon"
+            android:drawableLeft="@drawable/password_icon"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +96,9 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/sign_up_color_blue"
-        android:id="@+id/sign_up"
+        android:id="@+id/text_view_sign_up"
         />
 
 </LinearLayout>
+
+</ScrollView>
